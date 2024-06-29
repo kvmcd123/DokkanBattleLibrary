@@ -45,19 +45,29 @@ This can be found by using `identifyPixels.py`. The code will open up the image 
 
 Ensure that you find the pixels corresponding to cropped image first, then uncomment lines `9-12` to find the row and column pixels corresponding to the cropped image size instead of the original image size.
 
-Once these parameters have been found, open `splitCards.py` and update lines `25`, `31`, and `34`.
 
 ## Step 4: Splitting into Individual Cards
-
-## Step 5: 
+Once these pixel parameters have been found, open `splitCards.py` and update lines `25`, `31`, and `34`. Then simply run the code. After execution you should see `my_images` now populated.
 
 ![Alt text](imgs/splitCards.png?raw=true "Title")
 *Image from Dragon Ball Z Dokkan Battle © Bandai Namco Entertainment Inc.*
+
+## Step 5: Finding the Card ID
+The next step is to match each image in `my_images` to one in `all_images`. The name of the images in `all_images` corresponds to the card id. This is done using feature matching in cv2. Running this code will provide a text file with dictionary entries where the key is the file name in my_images, and the value corresponds to the card id from all_images.
+
+Simply run `identifyCards.py`, nothing needs to be changed in the file.
 
 ![Alt text](imgs/identifyCards.png?raw=true "Title")
 *Image from Dragon Ball Z Dokkan Battle © Bandai Namco Entertainment Inc.*
 
 
+## Step 6: Link Name with Card ID and Export
+The last step is to create a json file where each entry contains the 
+- card id
+- card title
+- card subtitle
+
+The card title and subtitle are found using `allData.json`. To do this, run `linkCards.py`. Upon successful execution, you should now have a json file, named `myLibrary.json` with all the cards from your Dokkan Battle Library.
 
 
 ## Credits
