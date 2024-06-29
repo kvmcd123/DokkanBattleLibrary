@@ -5,7 +5,7 @@ from os import listdir
 from os.path import isfile, join
 
 # Path to folder containing images of card list
-mypath='Dokkan/'
+mypath='app_images/'
 
 # Grabs the file name for every image in the folder
 all_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
@@ -16,7 +16,7 @@ i=0
 for file in all_files:
 
     # Define the path to image
-    path = r'Dokkan/'+file
+    path =mypath+file
 
     # Reading an image in default mode
     image = cv2.imread(path)
@@ -51,7 +51,7 @@ for file in all_files:
     # Loop through all cards
     for cell in cells:
         # Define a file name for the card
-        fName = './myImages/'+str(i)+'.png'
+        fName = './my_images/'+str(i)+'.png'
         # Log the name for a progress update
         print(fName)
         # Save the image

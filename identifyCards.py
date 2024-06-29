@@ -5,10 +5,10 @@ from os.path import isfile, join
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
 # Directory containing your cards
-my_path = 'myImages/'
+my_path = 'my_images/'
 
 # Directory containing database of dokkan images
-all_path = 'allImages/'
+all_path = 'all_images/'
 
 # List of files in the directory containing your cards
 my_files = [f for f in listdir(my_path) if isfile(join(my_path, f))]

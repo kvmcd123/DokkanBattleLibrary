@@ -29,8 +29,37 @@ In order to import your library, you must take images of your Card list.
 In `Dragon Ball Z: Dokkan Battle` go to 
 ` Team -> Character List` and take pictures containing 5 complete rows of cards, as shown below
 ![Alt text](imgs/takingPicture.png?raw=true "Title")
+*Image from Dragon Ball Z Dokkan Battle © Bandai Namco Entertainment Inc.*
 
+## Step 2: Uploading Images
+Upload your images to your `DokkanBattleLibrary\app_images`, ensuring the full resolution is maintained during upload.
 
+## Step 3: Identifying the Pixels
+In order to split the images into individual ones, the user must identify the pixels for
+
+1. Top and bottom of cropped image 
+2. Where each row starts
+3. Where each column starts
+
+This can be found by using `identifyPixels.py`. The code will open up the image defined on line `6` and will output the pixel position corresponding to wherever your cursor is. 
+
+Ensure that you find the pixels corresponding to cropped image first, then uncomment lines `9-12` to find the row and column pixels corresponding to the cropped image size instead of the original image size.
+
+Once these parameters have been found, open `splitCards.py` and update lines `25`, `31`, and `34`.
+
+## Step 4: Splitting into Individual Cards
+
+## Step 5: 
 
 ![Alt text](imgs/splitCards.png?raw=true "Title")
+*Image from Dragon Ball Z Dokkan Battle © Bandai Namco Entertainment Inc.*
+
 ![Alt text](imgs/identifyCards.png?raw=true "Title")
+*Image from Dragon Ball Z Dokkan Battle © Bandai Namco Entertainment Inc.*
+
+
+
+
+## Credits
+
+All images from Dragon Ball Z Dokkan Battle are © Bandai Namco Entertainment Inc. Used here under fair use for educational and non-commercial purposes.
