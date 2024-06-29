@@ -5,8 +5,12 @@ import numpy as np
 # Load the image
 image_path = 'app_images/1.png'  # Replace with your image path
 img = mpimg.imread(image_path)
-# Crop the image (iPhone 15 Pro Max)
-img=img[560:2065,:]
+
+# Crop the image 
+# top_pixel = 560
+# bottom_pixel = 2065
+# img = img[top_pixel:bottom_pixel,:]
+
 # Create a plot to display the image
 fig, ax = plt.subplots(figsize=(12, 8),constrained_layout=True)
 ax.imshow(img)

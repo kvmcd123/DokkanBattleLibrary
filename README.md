@@ -47,7 +47,7 @@ Ensure that you find the pixels corresponding to cropped image first, then uncom
 
 
 ## Step 4: Splitting into Individual Cards
-Once these pixel parameters have been found, open `splitCards.py` and update lines `25`, `31`, and `34`. Then simply run the code. After execution you should see `my_images` now populated.
+Once these pixel parameters have been found, open `splitCards.py` and update lines `28`, `34`, and `37`. Then simply run the code. After execution you should see `my_images` now populated.
 
 ![Alt text](imgs/splitCards.png?raw=true "Title")
 *Image from Dragon Ball Z Dokkan Battle © Bandai Namco Entertainment Inc.*

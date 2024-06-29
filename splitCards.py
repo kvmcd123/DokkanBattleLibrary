@@ -1,11 +1,14 @@
 import cv2
 import numpy as np
 import matplotlib.pyplot as plt
-from os import listdir
+from os import listdir, makedirs
 from os.path import isfile, join
 
 # Path to folder containing images of card list
 mypath='app_images/'
+
+# Create saving directory if it does not exist
+makedirs('my_images/', exist_ok=True)
 
 # Grabs the file name for every image in the folder
 all_files = [f for f in listdir(mypath) if isfile(join(mypath, f))]
